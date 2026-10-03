@@ -10,13 +10,13 @@
     <style>
 
         /* =========================
-           GENERAL PAGE STYLING
+           GENERAL
         ========================== */
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -25,109 +25,264 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            color: #222;
+            color: #151925;
+            background-color: white;
             line-height: 1.6;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1250px;
+            margin: auto;
         }
 
 
         /* =========================
-           NAVIGATION BAR
+           NAVIGATION
         ========================== */
 
         nav {
-            background-color: #1d3557;
-            padding: 16px 8%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 18px 0;
 
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        nav h2 {
-            color: white;
+        .nav-container {
+            width: 88%;
+            max-width: 1250px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rbs-logo {
+            color: #cc0033;
+            font-size: 26px;
+            font-weight: 800;
+            border-right: 1px solid #ccc;
+            padding-right: 15px;
+        }
+
+        .portfolio-name {
+            font-size: 20px;
+            font-weight: bold;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 30px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            font-weight: bold;
+            color: #151925;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: #a8dadc;
+            color: #cc0033;
+        }
+
+        .contact-nav {
+            background-color: #151925;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 25px;
+        }
+
+        .contact-nav:hover {
+            background-color: #cc0033;
+            color: white;
         }
 
 
         /* =========================
-           PERSONAL STATEMENT
+           HERO
         ========================== */
 
-        header {
-            background-color: #457b9d;
-            color: white;
+        .hero {
+            background-color: #f5f7fa;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+
+        /* PROFILE */
+
+        .profile {
             text-align: center;
-            padding: 100px 20px;
         }
 
-        header h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+        .headshot {
+            width: 210px;
+            height: 210px;
+
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: 6px solid white;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+
+            margin-bottom: 25px;
         }
 
-        header h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: normal;
+        .profile h2 {
+            font-size: 27px;
+            margin-bottom: 3px;
         }
 
-        header p {
-            font-size: 19px;
+        .profile h3 {
+            color: #cc0033;
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        .profile p {
+            color: #666;
+        }
+
+
+        /* INTRODUCTION */
+
+        .hero-text .tag {
+            display: inline-block;
+
+            background-color: #f8dfe3;
+            color: #9b1c31;
+
+            padding: 5px 15px;
+            border-radius: 20px;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            line-height: 1.08;
+            margin-bottom: 25px;
             max-width: 850px;
-            margin: auto;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            color: #59606c;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .primary-button {
+            display: inline-block;
+
+            background-color: white;
+            color: #151925;
+
+            border: 1px solid #ddd;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            box-shadow:
+                0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .primary-button:hover {
+            background-color: #cc0033;
+            color: white;
+        }
+
+        .text-link {
+            text-decoration: none;
+            color: #151925;
+            font-weight: bold;
+        }
+
+        .text-link:hover {
+            color: #cc0033;
         }
 
 
         /* =========================
-           GENERAL SECTIONS
+           SECTION GENERAL
         ========================== */
 
         section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 70px 25px;
+            padding: 90px 0;
         }
 
-        section h2 {
-            color: #1d3557;
-            font-size: 32px;
-            margin-bottom: 30px;
-            text-align: center;
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: #646b76;
+            font-size: 17px;
+            max-width: 750px;
+            margin-bottom: 45px;
         }
 
 
         /* =========================
-           ABOUT ME
+           ABOUT
         ========================== */
 
-        .about {
-            background-color: white;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
 
-            font-size: 18px;
-            text-align: center;
+        .about-card {
+            background-color: #f7f8fa;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .about-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-card p {
+            color: #555d68;
         }
 
 
@@ -135,21 +290,46 @@
            SKILLS
         ========================== */
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        #skills {
+            background-color: #f7f8fa;
         }
 
-        .skill {
-            background-color: #1d3557;
-            color: white;
+        .skills-grid {
+            display: grid;
 
-            padding: 12px 22px;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
 
-            border-radius: 25px;
-            font-weight: bold;
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: white;
+
+            border: 1px solid #e6e6e6;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            transition: 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-card h3 {
+            color: #cc0033;
+            margin-bottom: 7px;
+        }
+
+        .skill-card p {
+            color: #646b76;
+            font-size: 15px;
         }
 
 
@@ -158,28 +338,23 @@
         ========================== */
 
         .experience-card {
-            background-color: white;
-
-            padding: 30px;
-            margin-bottom: 25px;
-
-            border-radius: 10px;
-
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            border-left: 4px solid #cc0033;
+            padding: 5px 0 5px 30px;
+            margin-bottom: 45px;
         }
 
         .experience-card h3 {
-            color: #1d3557;
-            margin-bottom: 5px;
+            font-size: 24px;
         }
 
-        .experience-card h4 {
-            color: #457b9d;
-            margin-bottom: 5px;
+        .company {
+            color: #cc0033;
+            font-weight: bold;
+            margin-bottom: 3px;
         }
 
-        .experience-date {
-            color: #666;
+        .date {
+            color: #777;
             margin-bottom: 15px;
         }
 
@@ -189,6 +364,7 @@
 
         .experience-card li {
             margin-bottom: 8px;
+            color: #505762;
         }
 
 
@@ -196,67 +372,69 @@
            PROJECTS
         ========================== */
 
-        .projects-container {
+        #projects {
+            background-color: #f7f8fa;
+        }
+
+        .projects-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(300px, 1fr));
-
-            gap: 25px;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
         .project-card {
             background-color: white;
 
-            padding: 30px;
+            border: 1px solid #e5e5e5;
 
-            border-radius: 10px;
+            border-radius: 12px;
 
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+            padding: 35px;
 
-            transition:
-                transform 0.2s,
-                box-shadow 0.2s;
+            transition: 0.2s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
 
-            box-shadow: 0 6px 18px
-                rgba(0, 0, 0, 0.15);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .project-category {
+            color: #cc0033;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
         .project-card h3 {
-            color: #1d3557;
-            margin-bottom: 5px;
-        }
-
-        .project-card h4 {
-            color: #457b9d;
+            font-size: 25px;
             margin-bottom: 15px;
         }
 
         .project-card p {
-            margin-bottom: 20px;
+            color: #5e6570;
+            margin-bottom: 25px;
         }
 
-        .project-card a {
+        .project-button {
             display: inline-block;
 
-            background-color: #457b9d;
+            background-color: #151925;
             color: white;
 
+            padding: 11px 20px;
+
+            border-radius: 6px;
+
             text-decoration: none;
-
-            padding: 10px 18px;
-
-            border-radius: 5px;
-
             font-weight: bold;
         }
 
-        .project-card a:hover {
-            background-color: #1d3557;
+        .project-button:hover {
+            background-color: #cc0033;
         }
 
 
@@ -264,31 +442,19 @@
            CONTACT
         ========================== */
 
-        .contact {
-            background-color: white;
-
-            padding: 35px;
-
-            border-radius: 10px;
-
+        #contact {
             text-align: center;
-
-            box-shadow: 0 3px 12px
-                rgba(0, 0, 0, 0.10);
         }
 
-        .contact p {
-            margin: 10px 0;
+        #contact .section-description {
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .contact a {
-            color: #1d3557;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
 
@@ -297,48 +463,49 @@
         ========================== */
 
         footer {
-            background-color: #1d3557;
-
+            background-color: #151925;
             color: white;
-
             text-align: center;
-
-            padding: 25px;
+            padding: 30px;
         }
 
 
         /* =========================
-           MOBILE RESPONSIVE DESIGN
+           MOBILE
         ========================== */
 
-        @media (max-width: 700px) {
+        @media (max-width: 850px) {
 
-            nav {
-                flex-direction: column;
-                gap: 10px;
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
 
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            header {
-                padding: 70px 20px;
-            }
-
-            header h1 {
-                font-size: 36px;
-            }
-
-            header h2 {
-                font-size: 20px;
+                display: none;
             }
 
         }
 
     </style>
+
 </head>
 
 
@@ -351,80 +518,205 @@
 
     <nav>
 
-        <h2>Austin Zheng</h2>
+        <div class="nav-container">
 
-        <ul>
+            <div class="nav-brand">
 
-            <li>
-                <a href="#about">About</a>
-            </li>
+                <span class="rbs-logo">
+                    RBS
+                </span>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+                <span class="portfolio-name">
+                    Austin's Portfolio
+                </span>
 
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
+            </div>
 
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+            <ul>
 
-        </ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                       class="contact-nav">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
 
     </nav>
 
 
 
     <!-- =========================
-         PERSONAL STATEMENT
+         HERO / PERSONAL STATEMENT
     ========================== -->
 
-    <header>
+    <header class="hero">
 
-        <h1>Austin Zheng</h1>
+        <div class="container hero-content">
 
-        <h2>
-            Accounting Student | Rutgers Business School
-        </h2>
 
-        <p>
-            I am an Accounting major at Rutgers Business School–New Brunswick
-            with management and customer service experience, pursuing a career
-            in accounting and working toward becoming a CPA after graduation.
-        </p>
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+                <!--
+                Put your headshot image in the same folder
+                as this HTML file and name it:
+                austin-headshot.jpg
+                -->
+
+                <img
+                    src="austin-headshot.jpg"
+                    alt="Austin Zheng Headshot"
+                    class="headshot">
+
+                <h2>Austin Zheng</h2>
+
+                <h3>
+                    Rutgers Business School
+                </h3>
+
+                <p>
+                    Accounting | Class of 2028
+                </p>
+
+            </div>
+
+
+
+            <!-- INTRO -->
+
+            <div class="hero-text">
+
+                <span class="tag">
+                    Aspiring CPA
+                </span>
+
+                <h1>
+                    Building a foundation in accounting,
+                    leadership, and business.
+                </h1>
+
+                <p>
+                    I am an Accounting major at Rutgers Business
+                    School–New Brunswick with management and
+                    customer service experience, pursuing a career
+                    in accounting and working toward becoming a CPA
+                    after graduation.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="mailto:ajz87@scarletmail.rutgers.edu"
+                        class="primary-button">
+
+                        Email Me
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/austin-undefined-03146b3ab"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-link">
+
+                        LinkedIn Profile →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </header>
 
 
 
     <!-- =========================
-         ABOUT ME
+         ABOUT
     ========================== -->
 
     <section id="about">
 
-        <h2>About Me</h2>
+        <div class="container">
 
-        <div class="about">
+            <h2 class="section-title">
+                About Me
+            </h2>
 
-            <p>
-                Hello, my name is Austin. I am currently an Accounting major
-                at Rutgers Business School–New Brunswick and expect to graduate
-                in May 2028. I have over two years of experience in customer
-                service, including experience as a restaurant manager, where
-                I developed leadership, communication, and problem-solving
-                skills. I am proficient in Microsoft Excel and HTML coding
-                and am continuing to expand my technical and business skills.
-                Inspired by family members who work in the accounting field,
-                I have developed a strong interest in accounting and plan to
-                pursue my CPA license after graduation.
+            <p class="section-description">
+                My background combines accounting education,
+                management experience, customer service, and
+                technical skills.
             </p>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-card">
+
+                    <h3>
+                        My Background
+                    </h3>
+
+                    <p>
+                        Hello, my name is Austin. I am currently
+                        an Accounting major at Rutgers Business
+                        School–New Brunswick and expect to graduate
+                        in May 2028. I have over two years of
+                        customer service and restaurant management
+                        experience, where I developed leadership,
+                        communication, and problem-solving skills.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <h3>
+                        My Career Goals
+                    </h3>
+
+                    <p>
+                        Inspired by family members working in the
+                        accounting field, I developed an interest
+                        in accounting and business. After graduating,
+                        I plan to continue developing my professional
+                        accounting experience and pursue my CPA
+                        license.
+                    </p>
+
+                </div>
+
+
+            </div>
 
         </div>
 
@@ -433,61 +725,99 @@
 
 
     <!-- =========================
-         SKILLS SHOWCASE
+         SKILLS
     ========================== -->
 
     <section id="skills">
 
-        <h2>Skills</h2>
+        <div class="container">
 
-        <div class="skills-container">
+            <h2 class="section-title">
+                Skills
+            </h2>
 
-            <div class="skill">
-                Microsoft Excel
-            </div>
+            <p class="section-description">
+                A combination of technical, analytical, management,
+                and interpersonal skills developed through coursework
+                and professional experience.
+            </p>
 
-            <div class="skill">
-                Google Sheets
-            </div>
 
-            <div class="skill">
-                Microsoft Office
-            </div>
+            <div class="skills-grid">
 
-            <div class="skill">
-                HTML Coding
-            </div>
 
-            <div class="skill">
-                P&amp;L Analysis
-            </div>
+                <div class="skill-card">
+                    <h3>Microsoft Excel</h3>
+                    <p>
+                        Spreadsheet organization, calculations,
+                        and business analysis.
+                    </p>
+                </div>
 
-            <div class="skill">
-                Project Management
-            </div>
 
-            <div class="skill">
-                Customer Service
-            </div>
+                <div class="skill-card">
+                    <h3>P&amp;L Analysis</h3>
+                    <p>
+                        Understanding business performance,
+                        revenue, expenses, and profitability.
+                    </p>
+                </div>
 
-            <div class="skill">
-                Restaurant Management
-            </div>
 
-            <div class="skill">
-                Leadership
-            </div>
+                <div class="skill-card">
+                    <h3>HTML Coding</h3>
+                    <p>
+                        Creating and organizing webpages
+                        using HTML and CSS.
+                    </p>
+                </div>
 
-            <div class="skill">
-                Communication
-            </div>
 
-            <div class="skill">
-                Inventory Management
-            </div>
+                <div class="skill-card">
+                    <h3>Google Sheets</h3>
+                    <p>
+                        Spreadsheet management and
+                        collaborative data organization.
+                    </p>
+                </div>
 
-            <div class="skill">
-                Problem Solving
+
+                <div class="skill-card">
+                    <h3>Management</h3>
+                    <p>
+                        Employee training, team coordination,
+                        inventory, and daily operations.
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Customer Service</h3>
+                    <p>
+                        Communicating with customers and
+                        resolving issues in a fast-paced environment.
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Leadership</h3>
+                    <p>
+                        Training employees, coordinating teams,
+                        and supporting productivity.
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Project Management</h3>
+                    <p>
+                        Collaborating with teams to organize
+                        and complete business projects.
+                    </p>
+                </div>
+
+
             </div>
 
         </div>
@@ -497,88 +827,107 @@
 
 
     <!-- =========================
-         PROFESSIONAL EXPERIENCE
+         EXPERIENCE
     ========================== -->
 
     <section id="experience">
 
-        <h2>Professional Experience</h2>
+        <div class="container">
 
+            <h2 class="section-title">
+                Professional Experience
+            </h2>
 
-        <div class="experience-card">
-
-            <h3>Store Manager</h3>
-
-            <h4>
-                No. 1 Chinese Restaurant, LLC
-            </h4>
-
-            <p class="experience-date">
-                June 2021 – August 2024
+            <p class="section-description">
+                Professional experience that strengthened my
+                leadership, communication, and business
+                operations skills.
             </p>
 
-            <ul>
 
-                <li>
-                    Facilitated and managed restaurant operations
-                    supporting approximately $36,000 in average
-                    weekly gross sales.
-                </li>
+            <!-- STORE MANAGER -->
 
-                <li>
-                    Communicated between staff members and customers
-                    to support efficient operations and maintain
-                    customer relationships.
-                </li>
+            <div class="experience-card">
 
-                <li>
-                    Guided and trained new employees to improve
-                    operations and overall productivity.
-                </li>
+                <h3>
+                    Store Manager
+                </h3>
 
-                <li>
-                    Counted weekly inventory and applied FIFO
-                    inventory practices.
-                </li>
+                <p class="company">
+                    No. 1 Chinese Restaurant, LLC
+                </p>
 
-            </ul>
+                <p class="date">
+                    June 2021 – August 2024
+                </p>
 
-        </div>
+                <ul>
+
+                    <li>
+                        Facilitated and managed restaurant operations
+                        supporting approximately $36,000 in average
+                        weekly gross sales.
+                    </li>
+
+                    <li>
+                        Communicated between staff members and
+                        customers to support efficient operations
+                        and maintain customer relationships.
+                    </li>
+
+                    <li>
+                        Guided and trained new employees to improve
+                        operations and overall productivity.
+                    </li>
+
+                    <li>
+                        Counted weekly inventory and applied FIFO
+                        inventory practices.
+                    </li>
+
+                </ul>
+
+            </div>
 
 
-        <div class="experience-card">
 
-            <h3>
-                Virtual Infrastructure Team
-            </h3>
+            <!-- VIRTUAL INFRASTRUCTURE -->
 
-            <h4>
-                No. 1 Chinese Restaurant, LLC
-            </h4>
+            <div class="experience-card">
 
-            <p class="experience-date">
-                March 2019 – July 2025
-            </p>
+                <h3>
+                    Virtual Infrastructure Team
+                </h3>
 
-            <ul>
+                <p class="company">
+                    No. 1 Chinese Restaurant, LLC
+                </p>
 
-                <li>
-                    Trained and mentored more than 10 new team
-                    members to improve operational efficiency
-                    and productivity.
-                </li>
+                <p class="date">
+                    March 2019 – July 2025
+                </p>
 
-                <li>
-                    Coordinated responsibilities across multiple
-                    connected groups.
-                </li>
+                <ul>
 
-                <li>
-                    Participated in weekly meetings to support
-                    team performance and accountability.
-                </li>
+                    <li>
+                        Trained and mentored more than 10 new
+                        team members to improve operational
+                        efficiency and productivity.
+                    </li>
 
-            </ul>
+                    <li>
+                        Coordinated responsibilities across
+                        multiple connected groups.
+                    </li>
+
+                    <li>
+                        Participated in weekly meetings to
+                        support team performance and accountability.
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
@@ -587,88 +936,105 @@
 
 
     <!-- =========================
-         ACADEMIC PROJECTS
+         PROJECTS
     ========================== -->
 
     <section id="projects">
 
-        <h2>Academic Projects</h2>
+        <div class="container">
+
+            <h2 class="section-title">
+                Academic Projects
+            </h2>
+
+            <p class="section-description">
+                Selected Rutgers Business School projects
+                demonstrating research, teamwork, management
+                analysis, and strategic thinking.
+            </p>
 
 
-        <div class="projects-container">
+            <div class="projects-grid">
 
 
-            <!-- FRIENDS CAFE -->
+                <!-- FRIENDS CAFE -->
 
-            <div class="project-card">
+                <div class="project-card">
 
-                <h3>
-                    Friends Café Management Consulting Project
-                </h3>
+                    <p class="project-category">
+                        Management Consulting
+                    </p>
 
-                <h4>
-                    Rutgers Business School
-                </h4>
+                    <h3>
+                        Friends Café
+                    </h3>
 
-                <p>
-                    Collaborated with a team to analyze management
-                    challenges at Friends Café in New Brunswick.
-                    Conducted observations, employee interviews,
-                    review analysis, and secondary research to
-                    identify issues related to employee turnover,
-                    training, communication, and service quality.
-                    Developed recommendations using management
-                    concepts including emotional intelligence and
-                    group dynamics.
-                </p>
+                    <p>
+                        Collaborated with a team to analyze
+                        management challenges at Friends Café
+                        in New Brunswick. Conducted observations,
+                        employee interviews, review analysis,
+                        and secondary research to identify issues
+                        involving employee turnover, training,
+                        communication, and service quality.
+                        Developed recommendations using management
+                        concepts including emotional intelligence
+                        and group dynamics.
+                    </p>
 
-                <a
-                    href="https://1drv.ms/p/c/908806cf33609efc/IQAXSZeeOoVVS5tyGU3rdZt7Ac5wW4WwEn2OQJ87jo7_ARA?e=lUluR1"
-                    target="_blank"
-                    rel="noopener noreferrer">
 
-                    View Friends Café Project
+                    <a
+                        href="https://1drv.ms/p/c/908806cf33609efc/IQAXSZeeOoVVS5tyGU3rdZt7Ac5wW4WwEn2OQJ87jo7_ARA?e=lUluR1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-button">
 
-                </a>
+                        View Project →
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- SWIPEBACK -->
+
+                <div class="project-card">
+
+                    <p class="project-category">
+                        Business Strategy
+                    </p>
+
+                    <h3>
+                        SwipeBack
+                    </h3>
+
+                    <p>
+                        Collaborated with a team to develop
+                        SwipeBack, a conceptual campus meal-swipe
+                        exchange platform designed to help students
+                        buy, sell, or donate unused meal swipes.
+                        Developed financial and strategic objectives
+                        and evaluated corporate social responsibility,
+                        expansion strategy, employee management,
+                        operational processes, and customer retention.
+                    </p>
+
+
+                    <a
+                        href="https://1drv.ms/p/c/908806cf33609efc/IQCpNzMP096KS5uyw_F9XOZgAU-bNxwIY4G_HPUD65GiYzo?e=eM5Ao4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-button">
+
+                        View Project →
+
+                    </a>
+
+                </div>
+
 
             </div>
-
-
-
-            <!-- SWIPEBACK -->
-
-            <div class="project-card">
-
-                <h3>
-                    SwipeBack Business Strategy Project
-                </h3>
-
-                <h4>
-                    Rutgers Business School
-                </h4>
-
-                <p>
-                    Collaborated with a team to develop SwipeBack,
-                    a conceptual campus meal-swipe exchange platform
-                    designed to help students buy, sell, or donate
-                    unused meal swipes. Developed financial and
-                    strategic objectives and evaluated corporate
-                    social responsibility, expansion strategy,
-                    employee management, operational processes,
-                    and customer retention.
-                </p>
-
-                <a
-                    href="https://1drv.ms/p/c/908806cf33609efc/IQCpNzMP096KS5uyw_F9XOZgAU-bNxwIY4G_HPUD65GiYzo?e=eM5Ao4"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    View SwipeBack Project
-
-                </a>
-
-            </div>
-
 
         </div>
 
@@ -682,42 +1048,45 @@
 
     <section id="contact">
 
-        <h2>Contact Me</h2>
+        <div class="container">
 
-        <div class="contact">
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
 
-            <p>
-                Thank you for visiting my portfolio.
-                Feel free to connect with me regarding
-                accounting, internship, or professional
-                opportunities.
+            <p class="section-description">
+                Thank you for viewing my portfolio. Feel free
+                to contact me regarding accounting, internship,
+                or other professional opportunities.
             </p>
 
-            <p>
-                <strong>Email:</strong>
 
-                <a href="mailto:ajz87@scarletmail.rutgers.edu">
-                    ajz87@scarletmail.rutgers.edu
+            <div class="contact-buttons">
+
+                <a
+                    href="mailto:ajz87@scarletmail.rutgers.edu"
+                    class="primary-button">
+
+                    Email Me
+
                 </a>
-            </p>
 
-            <p>
-                <strong>LinkedIn:</strong>
 
                 <a
                     href="https://www.linkedin.com/in/austin-undefined-03146b3ab"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                    class="primary-button">
 
-                    View My LinkedIn
+                    LinkedIn
 
                 </a>
-            </p>
+
+            </div>
 
         </div>
 
     </section>
-
 
 </body>
 
